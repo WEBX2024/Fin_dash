@@ -1,6 +1,4 @@
-// ~25 realistic transactions spanning 2 months (Feb–Mar 2026)
 export const mockTransactions = [
-  // ── March 2026 ──
   { id: 1,  date: '2026-03-28', description: 'Monthly Salary',           amount: 5200.00, category: 'Salary',         type: 'income'  },
   { id: 2,  date: '2026-03-27', description: 'Whole Foods Groceries',    amount:  142.35, category: 'Groceries',      type: 'expense' },
   { id: 3,  date: '2026-03-25', description: 'Apartment Rent',           amount: 1800.00, category: 'Rent',           type: 'expense' },
@@ -15,7 +13,6 @@ export const mockTransactions = [
   { id: 12, date: '2026-03-08', description: 'Starbucks Coffee',         amount:    6.50, category: 'Dining',         type: 'expense' },
   { id: 13, date: '2026-03-05', description: 'Freelance Logo Design',    amount:  400.00, category: 'Freelance',      type: 'income'  },
 
-  // ── February 2026 ──
   { id: 14, date: '2026-02-28', description: 'Monthly Salary',           amount: 5200.00, category: 'Salary',         type: 'income'  },
   { id: 15, date: '2026-02-26', description: 'Trader Joe\'s Groceries',  amount:  118.90, category: 'Groceries',      type: 'expense' },
   { id: 16, date: '2026-02-25', description: 'Apartment Rent',           amount: 1800.00, category: 'Rent',           type: 'expense' },
@@ -30,7 +27,6 @@ export const mockTransactions = [
   { id: 25, date: '2026-02-04', description: 'Movie Tickets',            amount:   28.00, category: 'Entertainment',  type: 'expense' },
 ];
 
-// All unique categories for dropdowns / filters
 export const CATEGORIES = [
   'Salary',
   'Freelance',

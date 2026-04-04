@@ -1,19 +1,11 @@
 import { useState, useMemo } from 'react';
 
-/**
- * Custom hook that takes a transactions array and returns
- * filtered + sorted results along with control setters.
- *
- * @param {Array} transactions — full list of transaction objects
- * @returns {object}
- */
 export function useTransactions(transactions) {
   const [searchQuery, setSearchQuery]     = useState('');
-  const [typeFilter, setTypeFilter]       = useState('all'); // 'all' | 'income' | 'expense'
+  const [typeFilter, setTypeFilter]       = useState('all');
   const [sortField, setSortField]         = useState('date');
   const [sortDirection, setSortDirection] = useState('desc');
 
-  // Toggle sort — if same field, flip direction; otherwise switch field, default desc
   const toggleSort = (field) => {
     if (field === sortField) {
       setSortDirection((d) => (d === 'asc' ? 'desc' : 'asc'));
@@ -26,7 +18,6 @@ export function useTransactions(transactions) {
   const filtered = useMemo(() => {
     let result = [...transactions];
 
-    // ── Search (description + category) ────────────────────────
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(
@@ -36,17 +27,14 @@ export function useTransactions(transactions) {
       );
     }
 
-    // ── Type filter ────────────────────────────────────────────
     if (typeFilter !== 'all') {
       result = result.filter((t) => t.type === typeFilter);
     }
 
-    // ── Sort ───────────────────────────────────────────────────
     result.sort((a, b) => {
       let valA = a[sortField];
       let valB = b[sortField];
 
-      // Handle string comparison for date (ISO format sorts lexicographically)
       if (typeof valA === 'string') {
         valA = valA.toLowerCase();
         valB = valB.toLowerCase();

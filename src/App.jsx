@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/layout/Header'
 import Sidebar from './components/layout/Sidebar'
+import Dashboard from './pages/Dashboard'
 import { useAppContext } from './context/useAppContext'
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
         <main className="flex-1 p-4 sm:p-6 lg:p-8">
-          {currentPage === 'dashboard' && <Placeholder title="Dashboard" />}
+          {currentPage === 'dashboard' && <Dashboard />}
           {currentPage === 'transactions' && <Placeholder title="Transactions" />}
           {currentPage === 'insights' && <Placeholder title="Insights" />}
         </main>
@@ -33,3 +34,4 @@ function Placeholder({ title }) {
 }
 
 export default App
+

@@ -3,6 +3,7 @@ import { useAppContext } from '../context/useAppContext'
 import { formatCurrency } from '../utils/helpers'
 import SummaryCard from '../components/dashboard/SummaryCard'
 import BalanceTrendChart from '../components/dashboard/BalanceTrendChart'
+import SpendingByCategoryChart from '../components/dashboard/SpendingByCategoryChart'
 
 export default function Dashboard() {
   const { transactions } = useAppContext()
@@ -27,7 +28,10 @@ export default function Dashboard() {
         <SummaryCard label="Total Expenses" value={formatCurrency(totalExpenses)} icon="📉" color="text-red-500" />
       </div>
 
-      <BalanceTrendChart transactions={transactions} />
+      <div className="grid gap-4 lg:grid-cols-2">
+        <BalanceTrendChart transactions={transactions} />
+        <SpendingByCategoryChart transactions={transactions} />
+      </div>
     </div>
   )
 }

@@ -25,6 +25,16 @@ export const mockTransactions = [
   { id: 23, date: '2026-02-10', description: 'Freelance Article Writing',amount:  300.00, category: 'Freelance',      type: 'income'  },
   { id: 24, date: '2026-02-07', description: 'Costco Bulk Groceries',    amount:  210.45, category: 'Groceries',      type: 'expense' },
   { id: 25, date: '2026-02-04', description: 'Movie Tickets',            amount:   28.00, category: 'Entertainment',  type: 'expense' },
+  { id: 26, date: '2026-02-02', description: 'Emergency Car Repair',     amount: 3800.00, category: 'Transportation', type: 'expense' },
+
+  { id: 27, date: '2026-01-30', description: 'Monthly Salary',           amount: 5200.00, category: 'Salary',         type: 'income'  },
+  { id: 28, date: '2026-01-28', description: 'Year-End Bonus',           amount: 2500.00, category: 'Salary',         type: 'income'  },
+  { id: 29, date: '2026-01-25', description: 'Apartment Rent',           amount: 1800.00, category: 'Rent',           type: 'expense' },
+  { id: 30, date: '2026-01-22', description: 'Freelance App Redesign',   amount: 1200.00, category: 'Freelance',      type: 'income'  },
+  { id: 31, date: '2026-01-18', description: 'Grocery Haul',             amount:   95.60, category: 'Groceries',      type: 'expense' },
+  { id: 32, date: '2026-01-14', description: 'Electric Bill',            amount:   72.00, category: 'Utilities',      type: 'expense' },
+  { id: 33, date: '2026-01-10', description: 'Gym Membership',           amount:   45.00, category: 'Healthcare',     type: 'expense' },
+  { id: 34, date: '2026-01-05', description: 'Bus Pass',                 amount:   30.00, category: 'Transportation', type: 'expense' },
 ];
 
 export const CATEGORIES = [

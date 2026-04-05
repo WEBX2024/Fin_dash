@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useAppContext } from '../context/useAppContext'
 import { formatCurrency } from '../utils/helpers'
 import SummaryCard from '../components/dashboard/SummaryCard'
+import BalanceTrendChart from '../components/dashboard/BalanceTrendChart'
 
 export default function Dashboard() {
   const { transactions } = useAppContext()
@@ -25,6 +26,8 @@ export default function Dashboard() {
         <SummaryCard label="Total Income" value={formatCurrency(totalIncome)} icon="📈" color="text-emerald-600" />
         <SummaryCard label="Total Expenses" value={formatCurrency(totalExpenses)} icon="📉" color="text-red-500" />
       </div>
+
+      <BalanceTrendChart transactions={transactions} />
     </div>
   )
 }

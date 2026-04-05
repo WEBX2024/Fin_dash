@@ -24,7 +24,7 @@ export default function TransactionTable({ transactions, sortField, sortDirectio
 
   return (
     <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
-      <table className="w-full text-left text-sm">
+      <table className="w-full min-w-[700px] text-left text-sm">
         <thead className="border-b border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800">
           <tr>
             {COLUMNS.map(({ key, label }) => (

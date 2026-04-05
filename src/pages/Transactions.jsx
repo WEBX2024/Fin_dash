@@ -22,7 +22,7 @@ export default function Transactions() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between h-10">
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Transactions</h2>
         {isAdmin && (
           <button
